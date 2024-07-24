@@ -8,7 +8,7 @@ list_oir = Array.filter(list, ".oir");
 list_read = Array.concat(list_oib, list_oir); //.oirと.oibのみのリスト
 
 // Create CSV content
-csvContent = "filename,unit,width/pixel,height/pixel\n";
+csvContent = "filename,unit,width/pixel,height/pixel,depth/pixel\n";
 //main
 for(j=0; j<list_read.length; ++j){
 	name = list_read[j];
@@ -25,7 +25,7 @@ for(j=0; j<list_read.length; ++j){
 	//	Dialog.create("Width per pixel: " + width + " " + unit);
 	//	Dialog.create("Height per pixel: " + height + " " + unit);
 	
-	csvContent += name + "," + unit + "," + width + "," + height + "\n";
+	csvContent += name + "," + unit + "," + width + "," + height + "," + depth + "\n";
 	
 	close(name); //元ファイルを閉じる
 
